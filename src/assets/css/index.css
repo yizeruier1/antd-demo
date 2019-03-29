@@ -1,0 +1,9 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.warp{
+    width: 1000px;
+    height: 1000px;
+    background-color: orange;
+}
