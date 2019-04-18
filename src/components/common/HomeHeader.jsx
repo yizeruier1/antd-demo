@@ -35,7 +35,7 @@ class HomeHeader extends Component {
                         </Col>
                         <Col span={2}>
                             <Dropdown overlay={menu} trigger={['click']}>
-                                <div>
+                                <div style={{ cursor: 'pointer' }}>
                                     Click me <Icon type="down" />
                                 </div>
                             </Dropdown>

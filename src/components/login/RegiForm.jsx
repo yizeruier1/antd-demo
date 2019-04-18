@@ -49,7 +49,7 @@ class RegiForm1 extends Component {
                             })(
                                 <Input prefix = {
                                     <Icon type="user" style = {{ color: 'rgba(0,0,0,.25)' }} />
-                                } placeholder="用户名" />
+                                } placeholder="用户名" size="large" />
                             )
                         }
                     </Form.Item>
@@ -61,7 +61,7 @@ class RegiForm1 extends Component {
                             })(
                                 <Input prefix={
                                     <Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />
-                                } type="password" placeholder="密码" />
+                                } type="password" placeholder="密码" size="large" />
                             )
                         }
                     </Form.Item>
@@ -77,13 +77,13 @@ class RegiForm1 extends Component {
                             })(
                                 <Input prefix={
                                     <Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />
-                                } type="password" placeholder="再次输入密码" />
+                                } type="password" placeholder="再次输入密码" size="large" />
                             )
                         }
                     </Form.Item>
 
                     <Form.Item>
-                        <Button type="primary" htmlType="submit" className="login-form-button" loading={this.state.loading} style={{ width: '100%' }}>
+                        <Button type="primary" htmlType="submit" className="login-form-button" size="large" loading={this.state.loading} style={{ width: '100%' }}>
                             Submit
                         </Button>
                     </Form.Item>
