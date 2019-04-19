@@ -223,7 +223,7 @@ class EbayHotWeek extends Component {
                     </Row>
                 </div>
 
-                <div style={{ width: '1200px', height: 'auto', overflow: 'hidden', margin: '20px auto' }}>
+                <div className="common-warp-1200">
                     <Table columns={columns} dataSource={this.state.data} rowKey="id" bordered loading={false} pagination={false} />
                     <Row style={{ height: '50px', lineHeight: '50px', marginBottom: '30px' }}>
                         <Col span={4}>
