@@ -1,0 +1,67 @@
+.storerank-logo{
+    display: block;
+    width: auto;
+    height: 36px;
+    margin: 30px auto;
+}
+
+/* // 三个分类按钮 */
+.storerank-catebox{
+    width: 770px;
+    height: 146px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.storerank-catebox .storerank-catebox-item{
+    width: 250px;
+    height: 100%;
+    border-radius: 4px;
+    float: left;
+    border: 1px solid #3178b8;
+    box-sizing: border-box;
+    color: #0b5da7;
+    text-align: center;
+    background: url('../../assets/images/bg.png') no-repeat bottom center;
+    cursor: pointer;
+}
+.storerank-catebox .storerank-catebox-item:nth-child(2){
+    margin: 0 10px 0 10px;
+}
+.storerank-catebox .storerank-catebox-item p{
+    margin: 0;padding: 0;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    text-align: left;
+    text-indent: 10px;
+    font-size: 12px;
+}
+.storerank-catebox .storerank-catebox-item h3{
+    margin: 0;padding: 0;
+    width: 100%;
+    height: 36px;
+    margin-top: 8px;
+    font-size: 28px;
+    line-height: 30px;
+    color: #0b5da7;
+}
+.storerank-catebox .storerank-catebox-item h1{
+    margin: 0;padding: 0;
+    width: 100%;
+    height: 34px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #0b5da7;
+}
+.storerank-catebox .storerank-catebox-item div{
+    height: 20px;
+    font-size: 16px;
+}
+.ac-srcbi{
+    color: #fff !important;
+    background: url('../../assets/images/ac-bg.png') no-repeat bottom center !important;
+    border-color: transparent !important;
+}
+.ac-srcbi h3, .ac-srcbi h1{
+    color: #fff !important;
+}

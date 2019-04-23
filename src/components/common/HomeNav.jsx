@@ -19,15 +19,15 @@ class HomeNav extends Component {
                         每周爆款
                     </NavLink>
 
-                    <NavLink to="/home/eBaysamekind" className="linkItem" activeClassName="aclinkitem">
+                    <NavLink to="/home/eBayatatistics" className="linkItem" activeClassName="aclinkitem">
                         行业统计
                     </NavLink>
 
-                    <NavLink to="/home/eBayatatistics" className="linkItem" activeClassName="aclinkitem">
+                    <NavLink to="/home/storerank" className="linkItem" activeClassName="aclinkitem">
                         店铺排行
                     </NavLink>
 
-                    <NavLink to="/home/storerank" className="linkItem" activeClassName="aclinkitem">
+                    <NavLink to="/home/eBaysamekind" className="linkItem" activeClassName="aclinkitem">
                         全网同款
                     </NavLink>
                 </div>
