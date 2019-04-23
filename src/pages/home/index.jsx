@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import HomeHeader from '@/components/common/HomeHeader.jsx'
 import HomeFooter from '@/components/common/HomeFooter.jsx'
-import HomeNav from '@/components/common/HomeNav.jsx'
+import { mapStateToProps } from '@/redux/map.js'
+import EbayNav from './EbayNav.jsx'
+import AliNav from './AliNav.jsx'
 import './index.css'
 
 class Home extends Component {
@@ -15,7 +18,7 @@ class Home extends Component {
         return (
             <div className="homewarp">
                 <HomeHeader />
-                <HomeNav />
+                { this.props.platform === 'eBay' ? <EbayNav /> : <AliNav /> }
 
                 <div style={warpStyle}>
                     { this.props.children }
@@ -27,4 +30,4 @@ class Home extends Component {
     }
 }
 
-export default Home;
+export default Home = connect(mapStateToProps)(Home)

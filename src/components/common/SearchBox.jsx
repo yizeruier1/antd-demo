@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import eBayImg from '@/assets/images/ebay.png';
+import aliImg from '@/assets/images/aliexpress.png';
 import { Row, Col, Select, Input, Button } from 'antd';
 const InputGroup = Input.Group;
 const Option = Select.Option;
@@ -29,7 +30,7 @@ class SearchBox extends Component {
         let sele;
         if(this.props.searchConditions){
             sele = (
-                <Select defaultValue={this.props.searchConditions[0].key} size="large" style={{ width: '120px' }} onChange={value => this.getCon(value)}>
+                <Select defaultValue={this.props.searchConditions[0].key} size="large" style={{ width: this.props.isAli ? '80px' : '120px' }} onChange={value => this.getCon(value)}>
                 {
                     this.props.searchConditions.map(item => {
                         return <Option key={item.key} value={item.key}>{item.value}</Option>
@@ -41,12 +42,12 @@ class SearchBox extends Component {
         return(
             <div className="searchbox">
                 <div>
-                    <img src={eBayImg} alt="" />
+                    <img src={this.props.isAli ? aliImg : eBayImg} alt="" />
                     <Row>
                         <Col span={24}>
                             <InputGroup compact style={{ width: '100%' }}>
                                 { sele }
-                                <Input style={this.props.searchConditions ? { width: '342px' } : { width: '462px' }} 
+                                <Input style={!this.props.searchConditions ? { width: '462px' } : !this.props.isAli ? { width: '342px' } : { width: '382px' }} 
                                     size="large" 
                                     onChange={e => this.setState({ text: e.target.value })} />
                                 <Button type="primary" size="large" onClick={() => this.goSearch()}>查询</Button>

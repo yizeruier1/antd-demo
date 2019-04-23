@@ -17,7 +17,7 @@ class SearchConditionRow extends Component{
                         <Col span={1}>
                             排序
                         </Col>
-                        <Col span={19}>
+                        <Col span={this.props.twoBtn ? 18 : 19}>
                             <Select defaultValue="4" style={{ width: 268 }} onChange={e => this.handleChange(e)} size="large">
                                 <Option value="1">近1日销量</Option>
                                 <Option value="2">近2日销量</Option>
@@ -25,8 +25,12 @@ class SearchConditionRow extends Component{
                                 <Option value="4">近七日销量</Option>
                             </Select>
                         </Col>
-                        <Col span={2} style={{ textAlign: 'right' }}>
-                            <Checkbox onChange={ e => this.onChange(e)}>新上架</Checkbox>
+                        <Col span={this.props.twoBtn ? 3 : 2} style={{ textAlign: this.props.twoBtn ? 'center' : 'right' }}>
+                            {
+                                this.props.twoBtn ? 
+                                <Button size="large">清空检索</Button> : 
+                                <Checkbox onChange={ e => this.onChange(e)}>新上架</Checkbox>
+                            }
                         </Col>
                         <Col span={2}>
                             <Button type="primary" size="large">产品导出</Button>

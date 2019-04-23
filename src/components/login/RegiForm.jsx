@@ -1,12 +1,7 @@
 import React, { Component } from 'react';
 import { Form, Icon, Input, Button, message } from 'antd';
-import PropTypes from 'prop-types';
 
 class RegiForm1 extends Component {
-
-    static contextTypes = {
-        router: PropTypes.object.isRequired
-    };
 
     state = {
         loading: false

@@ -1,12 +1,8 @@
 import React, { Component } from 'react';
 import { Form, Icon, Input, Button } from 'antd';
-import PropTypes from 'prop-types';
+import { withRouter } from 'react-router-dom';
 
 class LoginForm1 extends Component {
-
-    static contextTypes = {
-        router: PropTypes.object.isRequired
-    };
 
     state = {
         loading: false
@@ -19,7 +15,7 @@ class LoginForm1 extends Component {
                 // console.log('Received values of form: ', values);
                 this.setState({ loading: true })
                 setTimeout(() => {
-                    this.context.router.history.push("/home");
+                    this.props.history.push("/home");
                 }, 1500)
             }
         });
@@ -76,5 +72,5 @@ class LoginForm1 extends Component {
     }
 }
 
-const LoginForm = Form.create({ name: 'normal_login' })(LoginForm1);
+const LoginForm = Form.create({ name: 'normal_login' })(withRouter(LoginForm1));
 export default LoginForm;

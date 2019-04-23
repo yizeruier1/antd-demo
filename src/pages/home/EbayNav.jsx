@@ -7,27 +7,27 @@ class HomeNav extends Component {
         return(
             <div className="homenav-warp">
                 <div>
-                    <NavLink to="/home/eBayhot" className="linkItem">
+                    <NavLink to="/home/eBay/eBayhot" className="linkItem">
                         <img src={logoimg} alt="" />
                     </NavLink>
 
-                    <NavLink to="/home/eBayhot" className="linkItem" activeClassName="aclinkitem">
+                    <NavLink to="/home/eBay/eBayhot" className="linkItem" activeClassName="aclinkitem">
                         热销产品
                     </NavLink>
 
-                    <NavLink to="/home/eBayhotweek" className="linkItem" activeClassName="aclinkitem">
+                    <NavLink to="/home/eBay/eBayhotweek" className="linkItem" activeClassName="aclinkitem">
                         每周爆款
                     </NavLink>
 
-                    <NavLink to="/home/eBayatatistics" className="linkItem" activeClassName="aclinkitem">
+                    <NavLink to="/home/eBay/eBayatatistics" className="linkItem" activeClassName="aclinkitem">
                         行业统计
                     </NavLink>
 
-                    <NavLink to="/home/storerank" className="linkItem" activeClassName="aclinkitem">
+                    <NavLink to="/home/eBay/storerank" className="linkItem" activeClassName="aclinkitem">
                         店铺排行
                     </NavLink>
 
-                    <NavLink to="/home/eBaysamekind" className="linkItem" activeClassName="aclinkitem">
+                    <NavLink to="/home/eBay/eBaysamekind" className="linkItem" activeClassName="aclinkitem">
                         全网同款
                     </NavLink>
                 </div>
