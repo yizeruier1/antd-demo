@@ -20,17 +20,19 @@ import AliStatistics from '@/pages/aliExpress-statistics/index.jsx'
 
 
 class App extends Component {
-
-    componentDidMount(){
+    componentDidMount() {
         const localPlat = window.localStorage.getItem('platform')
         if (localPlat) {
-            if (localPlat === 'aliExpress'){
+            if (localPlat === 'aliExpress') {
                 this.props.setAli()
-            }else{
+            } else {
                 this.props.setEbay()
             }
         }
     }
+    // componentWillReceiveProps(props){
+    //     console.log(props)
+    // }
     render() {
         return (
             <Router>
@@ -49,7 +51,7 @@ class App extends Component {
                             <Route path="/home/aliExpress/alimonitor" component={AliMonitor} />
                             <Route path="/home/aliExpress/alistatistics" component={AliStatistics} />
 
-                            <Redirect exact to={this.props.platform ? '/home/eBay/eBayhot' : '/home/aliExpress/alihot'} />
+                            <Redirect exact to={this.props.platform === 'eBay' ? '/home/eBay/eBayhot' : '/home/aliExpress/alihot'} />
                         </Switch>
                     </Home>
                 </Switch>

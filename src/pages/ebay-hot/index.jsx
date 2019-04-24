@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import SearchBox from '@/components/common/SearchBox';
 import SearchConditionRow from '@/components/common/SearchConditionRow';
-import demoImg from '@/assets/images/table-img.png'
+import demoImg from '@/assets/images/table-img.png';
+import { getList } from '@/api/index.js'
 
 import { Table, Row, Col, Pagination } from 'antd';
 
@@ -197,10 +198,21 @@ class EbayHot extends Component {
         }
 
     }
+    componentDidMount(){
+        getList().then( res => {
+            console.log(res)
+            this.setState({
+                pagination: {
+                    total: 50,
+                    current: 3,
+                    pageSize: 10
+                }
+            })
+        })
+    }
     // 分页
     onChange(current) {
-        console.log(current);
-        console.log(this)
+        console.log(current)
     }
     // 点击查询按钮
     getSearchInput(text, con) {
@@ -224,7 +236,8 @@ class EbayHot extends Component {
                                 total={this.state.pagination.total} 
                                 showTotal={() => `Total ${this.state.pagination.total} items`} 
                                 onChange={val => this.onChange(val)} 
-                                defaultCurrent={this.state.pagination.current} />
+                                defaultCurrent={1} 
+                                current={this.state.pagination.current} />
                         </Col>
                     </Row>
                 </div>

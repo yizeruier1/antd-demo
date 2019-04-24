@@ -1,3 +1,6 @@
+import { delaySetAli, delaySetEbay } from './actions.js'
+
+
 //  mapState
 export function mapStateToProps(state) {
     return {
@@ -13,6 +16,8 @@ export function mapDispatchToProps(dispatch) {
         }),
         setAli: () => dispatch({
             type: 'ali'
-        })
+        }),
+        delaySetEbay: () => dispatch(delaySetEbay()),
+        delaySetAli: () => dispatch(delaySetAli())
     }
 }
